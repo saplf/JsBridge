@@ -147,8 +147,8 @@
     var doc = document;
     _createQueueReadyIframe(doc);
     _createQueueReadyIframe4biz(doc);
-    var readyEvent = doc.createEvent('Events');
-    readyEvent.initEvent('WebViewJavascriptBridgeReady');
+    var readyEvent = doc.createEvent('Event');
+    readyEvent.initEvent('WebViewJavascriptBridgeReady', true);
     readyEvent.bridge = WebViewJavascriptBridge;
     doc.dispatchEvent(readyEvent);
 })();
